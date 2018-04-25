@@ -1,0 +1,64 @@
+﻿@model Assign2part3.Models.Description
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Description</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Game1.Game1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game1.Game1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protagonist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protagonist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
